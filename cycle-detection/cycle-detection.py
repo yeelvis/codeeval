@@ -2,7 +2,7 @@ import sys
 
 def check_cycle(sequence, starting_point, length):
     end_point = starting_point + length
-    if(end_point >+ len(sequence)):
+    if end_point >= len(sequence):
         return False
     else:
         for i in range(length):
@@ -17,8 +17,8 @@ def check_cycle(sequence, starting_point, length):
 def cycle_detection(sequence):
     for i in range(len(sequence)):
         for j in range(1, len(sequence)):
-            if(check_cycle(sequence, i, j)):
-                return sequence[i:i +j]
+            if check_cycle(sequence, i, j):
+                return sequence[i:i + j]
 
 
 test_cases = open(sys.argv[1], 'r')
